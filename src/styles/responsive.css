@@ -1,0 +1,121 @@
+/* =============================================================================
+   ARIYA ADMIN - Part 3: animations and responsive breakpoints
+   Breakpoints follow Bootstrap: 991.98px (tablet) and 575.98px (phone)
+   ========================================================================== */
+
+/* -------------------------------------------------------------- ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------ TABLET DOWN */
+@media (max-width: 991.98px) {
+  /* Sidebar becomes an off-canvas drawer */
+  .app-content { margin-left: 0; }
+
+  .app-sidebar {
+    width: 282px;
+    transform: translateX(-100%);
+    box-shadow: var(--app-shadow-lg);
+  }
+
+  .app-sidebar.is-open { transform: translateX(0); }
+
+  .sidebar-close-btn { display: inline-flex; }
+  .sidebar-collapse-btn { display: none !important; }
+
+  /* Overlay only makes sense with the drawer */
+  .sidebar-overlay { display: block; }
+
+  .topbar-menu-btn { display: inline-flex; }
+
+  .app-main { padding: 18px 16px 0; }
+
+  .login-brand { display: none !important; }
+  .login-form-side { padding: 32px 20px; }
+}
+
+@media (min-width: 992px) {
+  .sidebar-overlay { display: none; }
+
+  .sidebar-collapse-btn { display: flex; }
+
+  /* The close (x) button is only for the mobile drawer */
+  .sidebar-close-btn { display: none !important; }
+}
+
+/* ------------------------------------------------------------- PHONE DOWN */
+@media (max-width: 575.98px) {
+  .app-main { padding: 14px 12px 0; }
+
+  .content-card,
+  .stat-card { padding: 16px; }
+
+  .table-responsive { margin-left: -16px; margin-right: -16px; }
+  .app-table th:first-child,
+  .app-table td:first-child { padding-left: 16px; }
+  .app-table th:last-child,
+  .app-table td:last-child { padding-right: 16px; }
+
+  .page-title { font-size: 1.2rem; }
+  .stat-value { font-size: 1.4rem; }
+
+  .topbar-titles { display: none; }
+  .topbar-search { display: none !important; }
+  .app-topbar { padding: 0 12px; }
+
+  /* Dropdowns stretch over the screen on small phones */
+  .dropdown-panel {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 66px;
+    min-width: 0;
+  }
+
+  .profile-meta { display: none; }
+
+  /* Data tables scroll horizontally instead of squeezing every column */
+  .app-table { min-width: 620px; }
+  .order-id { white-space: nowrap; }
+
+  .table-toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar-search { max-width: none; }
+  .toolbar-filters .form-select { flex: 1; min-width: 0; }
+
+  .table-pagination { justify-content: center; }
+  .pagination-info { width: 100%; text-align: center; }
+
+  .form-actions { flex-direction: column-reverse; }
+  .form-actions .btn { width: 100%; }
+
+  .app-modal-body { padding: 16px; }
+  .app-modal-header,
+  .app-modal-footer { padding-left: 16px; padding-right: 16px; }
+
+  .login-title { font-size: 1.4rem; }
+  .app-footer { margin-top: 20px; }
+}
+
+/* Small height desktops (laptops) */
+@media (min-width: 992px) and (max-height: 720px) {
+  .sidebar-nav { padding-bottom: 8px; }
+}
