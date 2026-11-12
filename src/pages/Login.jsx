@@ -63,7 +63,7 @@ export default function Login() {
         <div className="login-brand-inner">
           <div className="login-logo">
             <span className="brand-logo brand-logo-light">A</span>
-            <strong>Ariya Admin</strong>
+            <strong>Amir Admin</strong>
           </div>
 
           <h2 className="login-headline">
@@ -95,7 +95,7 @@ export default function Login() {
         <div className="login-form-card">
           <div className="mobile-login-logo d-lg-none">
             <span className="brand-logo">A</span>
-            <strong>Ariya Admin</strong>
+            <strong>Amir Admin</strong>
           </div>
 
           <h4 className="login-title">Welcome back</h4>
@@ -209,7 +209,7 @@ export default function Login() {
           </div>
 
           <p className="login-footer-text text-center text-muted small mb-0">
-            © {new Date().getFullYear()} Ariya Admin. All rights reserved.
+            © {new Date().getFullYear()} Amir Admin. All rights reserved.
           </p>
         </div>
       </main>

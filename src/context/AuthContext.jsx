@@ -13,7 +13,7 @@ const USER_KEY = 'ariya-user';
 const EMAIL_KEY = 'ariya-remembered-email';
 
 /** Demo account accepted by the fake login (showed on the login page). */
-export const DEMO_CREDENTIALS = { email: 'admin@ariya.com', password: '123456' };
+export const DEMO_CREDENTIALS = { email: 'admin@Amir.com', password: '123456' };
 
 const readStoredSession = () => {
   try {
