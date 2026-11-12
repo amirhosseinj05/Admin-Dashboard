@@ -35,7 +35,7 @@ export default function Sidebar({ open, collapsed, onClose, onCollapse }) {
         <div className="sidebar-brand">
           <span className="brand-logo">A</span>
           <span className="brand-text">
-            <strong>Ariya</strong>
+            <strong>Amir</strong>
             <small>Admin Panel</small>
           </span>
           <button type="button" className="icon-btn icon-btn-sm sidebar-close-btn" onClick={onClose}>
