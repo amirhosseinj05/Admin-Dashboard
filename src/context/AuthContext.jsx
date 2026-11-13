@@ -9,8 +9,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
  */
 const AuthContext = createContext(null);
 
-const USER_KEY = 'ariya-user';
-const EMAIL_KEY = 'ariya-remembered-email';
+const USER_KEY = 'Amir-user';
+const EMAIL_KEY = 'Amir-remembered-email';
 
 /** Demo account accepted by the fake login (showed on the login page). */
 export const DEMO_CREDENTIALS = { email: 'admin@Amir.com', password: '123456' };

@@ -61,7 +61,7 @@ export default function Layout() {
           </div>
 
           <footer className="app-footer">
-            © {new Date().getFullYear()} Ariya Admin — Built with React &amp; Bootstrap.
+            © {new Date().getFullYear()} Amir Admin — Built with React &amp; Bootstrap.
           </footer>
         </main>
       </div>
